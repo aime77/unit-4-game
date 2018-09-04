@@ -18,8 +18,10 @@ background-color:lightgoldenrodyellow;
 color: blue;
 }
 
-#randnum{
+.randnum{
     background-color: blanchedalmond;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size:35px;
 }
 
 #points{
@@ -27,5 +29,7 @@ color: blue;
 }
 
 #tscore, #tscoreNO{
-    background-color: cadetblue;
+    background-color: lightskyblue;
+    font-family: 'Sawarabi Mincho', sans-serif;
+
 }
