@@ -21,11 +21,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="col-lg-3 col-md-4 col-sm-4 py-3">Crystals Collector!</h1>
+                <h1 class="col-lg-3 col-md-6 col-sm-12 py-3 my-1 border rounded border-dark">Crystals Collector!</h1>
             </div>
 
             <div class="col-md-12">
-                <div class="col-md-5 col-sm-12 py-3 my-1" id="instructions">
+                <div class="col-md-6 col-sm-12 py-3 my-1 border rounded border-dark" id="instructions">
                     <p>You will be given a random number at the start of the game</p>
                     <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
                         total score.</p>
@@ -37,11 +37,11 @@
             </div>
 
             <div class="col-md-12 my-2 row">
-                <div class="col-md-2 ml-3 randnum">
+                <div class="col-md-2 ml-3 randnum border rounded border-dark">
                     <span class="randnum">0</span>
                 </div>
 
-                <div class="col-md-2 py-3 ml-3" id="points">
+                <div class="col-md-2 py-3 ml-3 border rounded border-dark" id="points">
                     <span id="result"></span>
                     <h5>WINS:</h5>
                     <span id="wins">0</span>
@@ -51,20 +51,24 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12 my-2">
+            <div class="col-md-6 col-lg-4 col-sm-12 col-xs-6 my-2">
 
-                <img src=".\assets\images\Blue-gem.jpg" class="img-fluid col-md-2 p-0" id="diamond" alt="Diamond">
-                <img src=".\assets\images\ruby.jpeg" class="img-fluid col-md-2 p-0" id="ruby" alt="Ruby">
-                <img src=".\assets\images\gold.jpg" class="img-fluid col-md-2 p-0" id="gold" alt="Gold">
-                <img src=".\assets\images\greengem.jpeg" class="img-fluid col-md-2 p-0" id="jade" alt="Jade">
+                <img src=".\assets\images\Blue-gem.jpg" class="img-fluid col-md-2 col-sm-2 col-xs-2 p-0" id="diamond" alt="Diamond">
+                <img src=".\assets\images\ruby.jpeg" class="img-fluid col-md-2 col-sm-2 col-xs-2 p-0" id="ruby" alt="Ruby">
+                <img src=".\assets\images\gold.jpg" class="img-fluid col-md-2 col-sm-2 col-xs-2 p-0" id="gold" alt="Gold">
+                <img src=".\assets\images\greengem.jpeg" class="img-fluid col-md-2 col-sm-2 col-xs-2 p-0" id="jade" alt="Jade">
 
             </div>
 
             <div class="col-12">
-                <span class="col-md-2 px-5" id="tscore">Total Score:</span>
+                <div class="col-md-2 py-1 my-1 score border rounded border-dark">
+                    <span id="tscore">Total Score:</span>
+                </div>
             </div>
             <div class="col-12">
-                <span class="display-4 col-md-2 px-5" id="tscoreNO">0</span>
+                <div class="col-md-2 px-9 py-1 my-2 score border rounded border-dark">
+                    <span class="display-4" id="tscoreNO">0</span>
+                </div>
             </div>
         </div>
     </div>

@@ -11,14 +11,14 @@ $(document).ready(function () {
     var loose = 0;
     var randNumbers = [];
     var totalScore = 0;
-    var rubySound=new Audio;
 
-    function preload(){
-        rubySound=loadSound(".\assets\sound\pinwheel.mp3");
-        goldSound=loadSound(".\assets\sound\piston-3.mp3");
-        diamondSound=loadSound(".assets\sound\piston-1.mp3");
-        jadeSound=loadSound(".\assets\sound\piston-2.mp3");
-    }
+    var rubySound = document.createElement("audio");
+    rubySound.setAttribute("src", "assets\sound\prism-1.mp3");
+
+    var goldSound=new Audio("assets\sound\piston-3.mp3");
+    var diamondSound=new Audio("assets\sound\piston-1.mp3");
+    var jadeSound=new Audio("assets\sound\piston-2.mp3");
+    var img = $("<img>");
 
     //computer chooses random number
     function reset() {
@@ -38,6 +38,7 @@ $(document).ready(function () {
     //add to total score
 
     $("#ruby").on("click", function () {
+        $("#result").fadeOut();
         rubySound.play();
         randNumbers.push(randomRuby);
         var sum = add(randNumbers);
@@ -46,18 +47,24 @@ $(document).ready(function () {
     });
 
     $("#diamond").on("click", function () {
+        $("#result").fadeOut();
+        diamondSound.play();
         randNumbers.push(randomDiamond);
         console.log(randNumbers);
         var sum = add(randNumbers);
     });
 
     $("#jade").on("click", function () {
+        $("#result").fadeOut();
+        jadeSound.play();
         randNumbers.push(randomJade);
         console.log(randNumbers);
         var sum = add(randNumbers);
     });
 
     $("#gold").on("click", function () {
+        $("#result").fadeOut();
+        goldSound.play();
         randNumbers.push(randomGold);
         console.log(randNumbers);
         var sum = add(randNumbers);
@@ -71,8 +78,8 @@ $(document).ready(function () {
             sum += array[i];
         }
         $("#tscoreNO").text(sum);
-        wins(sum);
         losses(sum);
+        wins(sum);
         return sum;
     }
 
@@ -83,8 +90,10 @@ $(document).ready(function () {
     //reset random number
     function wins(sum) {
         if (sum === randComp) {
+            img.fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
             win++;
             $("#wins").text(win);
+            $("#result").fadeIn();
             $("#result").text("One point up!! Great job!!");
             reset();
         }
@@ -99,6 +108,7 @@ $(document).ready(function () {
         if (sum > randComp) {
             loose += 1;
             $("#looses").text(loose);
+            $("#result").fadeIn();
             $("#result").text("You went over the number but give it another try!!");
             reset();
 
