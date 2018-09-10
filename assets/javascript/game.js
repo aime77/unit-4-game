@@ -13,11 +13,12 @@ $(document).ready(function () {
     var totalScore = 0;
 
     var rubySound = document.createElement("audio");
-    rubySound.setAttribute("src", "assets\sound\prism-1.mp3");
+    rubySound.setAttribute("src", "assets/sound/prism-1.mp3");
 
-    var goldSound=new Audio("assets\sound\piston-3.mp3");
-    var diamondSound=new Audio("assets\sound\piston-1.mp3");
-    var jadeSound=new Audio("assets\sound\piston-2.mp3");
+    var goldSound=new Audio("assets/sound/piston-3.mp3");
+    var diamondSound=new Audio("assets/sound/piston-1.mp3");
+    var jadeSound=new Audio("assets/sound/piston-2.mp3");
+
     var img = $("<img>");
 
     //computer chooses random number
